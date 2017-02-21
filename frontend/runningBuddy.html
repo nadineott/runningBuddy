@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <title>RunningBuddy</title>
+  <link href = "runningBuddy.css" rel = "stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="controller.js"></script>
+</head>
+<body>
+  <div ng-app="runningBud">
+  <div ng-controller="runningBudController">
+
+
+<div class = "innerBox">
+
+  <div class = "loginOption" ng-show= "show==1">Have an account? <button ng-click="signIn()">Sign in</button></div>
+
+
+  <div class = "login center" ng-show = "show==3">
+    <form>
+      <input type = "text" id = "loginEmail" class = "formItem" placeholder = "email">
+      <input type = "password" id = "pw" class = "formItem" placeholder = "password">
+    </form>
+    <button type="submit center" class = "center" value="Log in" ng-click="login()" > Submit</button>
+</div>
+
+  <div class = "landing center" ng-show = "show==1">
+    <div class = "center">Running Buddy: connecting disabled runners with guide runners in San Francisco</div>
+    <br>
+      <button class = "landingButton" ng-click="loadForm('runner', 2)">I am looking for a guide runner</button>
+      <button class = "landingButton" ng-click="loadForm('guide', 3)">I would like to be a guide runner</button>
+  </div>
+
+
+  <div ng-show = "show==2">
+  <form class = "center">
+    <input type = "text" id = "firstName" class = "formItem" placeholder = "first name"> <br>
+    <input type = "text" id = "lastName" class = "formItem" placeholder = "last name"><br>
+    <input type = "text" id = "phone" class = "formItem" placeholder = "phone number"><br>
+    <input type = "text" id = "email" class = "formItem" placeholder = "email"><br>
+   <div class = "formItem"> Neighborhoods of interest (check all that apply)</div>
+    <table id = "hoods">
+      <td>
+        <input type = "checkbox" value = "Castro">Castro<br>
+        <input type = "checkbox" value = "Chinatown">Chinatown<br>
+        <input type = "checkbox" value = "Cole Valley">Cole Valley<br>
+        <input type = "checkbox" value = "Financial District">Financial District<br>
+        <input type = "checkbox" value = "Fisherman's Wharf">Fisherman's Wharf<br>
+        <input type = "checkbox" value = "Golden Gate Park">Golden Gate Park<br>
+        <input type = "checkbox" value = "Hayes Valley">Hayes Valley<br>
+        <input type = "checkbox" value = "Japantown">Japantown<br>
+      </td>
+      <td>
+        <input type = "checkbox" value = "Lower Haight">Lower Haight<br>
+        <input type = "checkbox" value = "Marina">Marina<br>
+        <input type = "checkbox" value = "Mission">Mission<br>
+        <input type = "checkbox" value = "Nob Hill">Nob Hill<br>
+        <input type = "checkbox" value = "Noe Valley">Noe Valley<br>
+        <input type = "checkbox" value = "North Beach">North Beach<br>
+        <input type = "checkbox" value = "Pac Heights">Pac Heights<br>
+        <input type = "checkbox" value = "Potrero Hill">Potrero Hill<br>
+      </td>
+      <td>
+        <input type = "checkbox" value = "Presidio">Presidio<br>
+        <input type = "checkbox" value = "The Richmond">The Richmond<br>
+        <input type = "checkbox" value = "Russian Hill">Russian Hill<br>
+        <input type = "checkbox" value = "Sea Cliff">Sea Cliff<br>
+        <input type = "checkbox" value = "SOMA">SOMA<br>
+        <input type = "checkbox" value = "Sunset">Sunset<br>
+        <input type = "checkbox" value = "Tenderloin">Tenderloin<br>
+        <input type = "checkbox" value = "Upper Haight">Upper Haight<br>
+      </td>
+    </table>
+
+
+    <button type="submit" value="submit" ng-click="submit()" > Submit</button>
+    <div id = "fix">Please fix highlighted entry fields</div>
+  </form>
+  </div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

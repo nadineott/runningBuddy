@@ -1,0 +1,80 @@
+.innerBox {
+  border: .1em solid black;
+  position: absolute;
+  height: 85%;
+  width: 80%;
+  top: 7%;
+  left: 10%;
+  padding: .5em;
+}
+
+.landing {
+  width: 80%;
+  padding: .5em;
+  border: .1em solid black;
+  text-align: center
+}
+
+button {
+  background-color: white;
+  border-radius: 5px;
+  border: .1em solid black;
+}
+
+.landingButton {
+  padding: 2em;
+  width: 25%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: lightgrey;
+  color: white;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+table td {
+  border: 1px solid black;
+}
+
+#hoods {
+  width: 50%;
+  margin: 2% auto 2% auto;
+}
+
+.formItem {
+  margin: .5em;
+}
+
+#fix {
+  visibility: hidden;
+}
+
+.login>form{
+  width: 25%;
+  border: 1px solid black;
+  padding: 1%;
+  margin: 2% auto 2% auto;
+}
+
+.login>form>input {
+  width: 90%;
+  height: 100%;
+}
+
+.loginOption {
+  width: 30%;
+  margin-left: auto;
+  border: 1%;
+  padding: 1%;
+}
